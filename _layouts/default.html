@@ -22,7 +22,7 @@ var formBasic = function () {
     var formData = $("#formBasic").serialize();
     $.ajax({
 
-        type: 'post',
+        type: 'get',
         data: formData,
         dataType: 'json',
         url: 'https://test_placeholder',
