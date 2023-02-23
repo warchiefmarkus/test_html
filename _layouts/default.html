@@ -4,28 +4,19 @@
   {%- include head.html -%}
 
   <body>
-
-<!--     {%- include header.html -%} -->
-
     <div class="py-5">
-      <div class="container page-content">
-        
+      <div class="container page-content">        
         <div class="modal-body">
          <form name="formBasic" id="formBasic">
          <input type="hidden" name="function" value="basic-form">
          </form>
         </div>
         <button type="button" class="btn btn-primary" id="basic-submit">HELLO WORLD!</button>
-        
-<!--           {{ content }} -->
       </div>
     </div>
-
-<!--     {%- include footer.html -%} -->
-
   </body>
   
-  <script>
+<script>
 $(document).ready(function () {
 var formBasic = function () {
     var formData = $("#formBasic").serialize();
@@ -34,15 +25,15 @@ var formBasic = function () {
         type: 'post',
         data: formData,
         dataType: 'json',
-        url: 'https://jsonplaceholder.typicode.com/todos/1',
+        url: 'https://test_placeholder',
 
         error: function () {
-            alert("There was an error processing this page.");
+            // alert("There was an error processing this page.");
             return false;
         },
 
         complete: function (output) {
-        	alert(output);            
+        	// alert(output);            
         }
     });
     return false;
